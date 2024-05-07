@@ -1,0 +1,485 @@
+7/5/2024, 5:20:29 am info: Listening on port '9090'
+7/5/2024, 5:22:00 am debug: Processing request '{"method":"GET","url":"/api/","headers":{"host":"localhost:9090","sec-fetch-site":"none","connection":"keep-alive","upgrade-insecure-requests":"1","sec-fetch-mode":"navigate","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15","accept-language":"en-IN,en-GB;q=0.9,en;q=0.8","sec-fetch-dest":"document","accept-encoding":"gzip, deflate"},"body":{}}'
+7/5/2024, 5:22:15 am debug: Processing request '{"method":"GET","url":"/api/listITEM","headers":{"host":"localhost:9090","sec-fetch-site":"none","connection":"keep-alive","upgrade-insecure-requests":"1","sec-fetch-mode":"navigate","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15","accept-language":"en-IN,en-GB;q=0.9,en;q=0.8","sec-fetch-dest":"document","accept-encoding":"gzip, deflate"},"body":{}}'
+7/5/2024, 5:22:51 am debug: Processing request '{"method":"GET","url":"/api/listItem","headers":{"host":"localhost:9090","sec-fetch-site":"none","connection":"keep-alive","upgrade-insecure-requests":"1","sec-fetch-mode":"navigate","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15","accept-language":"en-IN,en-GB;q=0.9,en;q=0.8","sec-fetch-dest":"document","accept-encoding":"gzip, deflate"},"body":{}}'
+7/5/2024, 5:29:19 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"0e409f54-628a-43b0-8df0-ae3b39b2445d","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"0"},"body":{}}'
+7/5/2024, 5:29:19 am error: Error in processing request - Error: INVALID_LIST_ITEM
+    at ListItemSvc.<anonymous> (/Users/vinod/event-engine/src/svc/listItem-svc.ts:20:19)
+    at step (/Users/vinod/event-engine/src/svc/listItem-svc.ts:44:23)
+    at Object.next (/Users/vinod/event-engine/src/svc/listItem-svc.ts:25:53)
+    at /Users/vinod/event-engine/src/svc/listItem-svc.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/vinod/event-engine/src/svc/listItem-svc.ts:15:12)
+    at ListItemSvc.create (/Users/vinod/event-engine/src/svc/listItem-svc.ts:61:16)
+    at /Users/vinod/event-engine/src/routes/list-item-router.ts:11:44
+    at step (/Users/vinod/event-engine/src/routes/list-item-router.ts:33:23)
+    at Object.next (/Users/vinod/event-engine/src/routes/list-item-router.ts:14:53) {
+  [stack]: [Getter/Setter],
+  [message]: 'INVALID_LIST_ITEM'
+}
+7/5/2024, 5:35:55 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"c239d860-1e41-47ce-acc4-b6b602e68c4b","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"363"},"body":{"userId":"1","mediaId":"11","mediaType":"Movie","mediaItem":{"id":"11","title":"Kaho Na Pyar Hai","description":"Love Drama Thriller","genre":["Drama","Romance"],"releaseDate":"12-2-2002","director":"Vinod Chopra","actors":["Amisha Patel","Hrithik Roshan"]}}}'
+7/5/2024, 5:35:55 am error: Error in processing request - RangeError: Maximum call stack size exceeded
+    at /Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:23:9
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:19:12)
+    at ListItemDaoMongo.upsert (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:104:16)
+    at ListItemDaoMongo.<anonymous> (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:27:20)
+    at step (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:48:23)
+    at Object.next (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:29:53)
+    at /Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:23:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:19:12) {
+  [stack]: [Getter/Setter],
+  [message]: 'Maximum call stack size exceeded'
+}
+7/5/2024, 5:40:35 am info: Listening on port '9090'
+7/5/2024, 5:40:40 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"e36ad50a-d256-49a4-bb62-e6d2a0d84385","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"363"},"body":{"userId":"1","mediaId":"11","mediaType":"Movie","mediaItem":{"id":"11","title":"Kaho Na Pyar Hai","description":"Love Drama Thriller","genre":["Drama","Romance"],"releaseDate":"12-2-2002","director":"Vinod Chopra","actors":["Amisha Patel","Hrithik Roshan"]}}}'
+7/5/2024, 5:40:40 am error: Error in processing request - RangeError: Maximum call stack size exceeded
+    at /Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:23:9
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:19:12)
+    at ListItemDaoMongo.upsert (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:104:16)
+    at ListItemDaoMongo.<anonymous> (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:27:20)
+    at step (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:48:23)
+    at Object.next (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:29:53)
+    at /Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:23:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/vinod/event-engine/src/dao/mongo/listItem-dao-mongo.ts:19:12) {
+  [stack]: [Getter/Setter],
+  [message]: 'Maximum call stack size exceeded'
+}
+7/5/2024, 5:44:57 am info: Listening on port '9090'
+7/5/2024, 5:45:08 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"92dcb065-894e-4c2a-8d7e-5193a9c577ea","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"363"},"body":{"userId":"1","mediaId":"11","mediaType":"Movie","mediaItem":{"id":"11","title":"Kaho Na Pyar Hai","description":"Love Drama Thriller","genre":["Drama","Romance"],"releaseDate":"12-2-2002","director":"Vinod Chopra","actors":["Amisha Patel","Hrithik Roshan"]}}}'
+7/5/2024, 5:45:08 am debug: Upserting with query { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' } for record {
+  userId: '1',
+  mediaId: '11',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '11',
+    title: 'Kaho Na Pyar Hai',
+    description: 'Love Drama Thriller',
+    genre: [ 'Drama', 'Romance', [length]: 2 ],
+    releaseDate: '12-2-2002',
+    director: 'Vinod Chopra',
+    actors: [ 'Amisha Patel', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T00:15:08.586Z',
+  updatedAt: '2024-05-07T00:15:08.586Z'
+}
+7/5/2024, 5:45:08 am info: UserList created with ID 2f9ebf35-7a4b-4c6e-bd75-072e02e888ba
+7/5/2024, 5:46:15 am info: Listening on port '9090'
+7/5/2024, 5:56:09 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"89b35eb8-e88d-4568-bda1-46413985fd89","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"865"},"body":{"userId":"1","mediaId":"12","mediaType":"TVShow","mediaItem":{"id":"12","title":"Suits","description":"Drama Thriller","genre":["Drama","Romance"],"episodes":[{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]},{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]}]}}}'
+7/5/2024, 5:56:09 am debug: Upserting with query { _id: 'dfd0fffe-67a9-4cd6-ac4a-2879a51f807d' } for record {
+  userId: '1',
+  mediaId: '12',
+  mediaType: 'TVShow',
+  mediaItem: {
+    id: '12',
+    title: 'Suits',
+    description: 'Drama Thriller',
+    genre: [ 'Drama', 'Romance', [length]: 2 ],
+    episodes: [
+      {
+        episodeNumber: '1',
+        seasonNumber: '1',
+        releaseDate: '12-2-2012',
+        director: 'Russo Brothers',
+        actors: [
+          'Mike',
+          'Harvey',
+          'Louis',
+          'Donna',
+          'Rachel',
+          'Jessica',
+          [length]: 6
+        ]
+      },
+      {
+        episodeNumber: '1',
+        seasonNumber: '1',
+        releaseDate: '12-2-2012',
+        director: 'Russo Brothers',
+        actors: [
+          'Mike',
+          'Harvey',
+          'Louis',
+          'Donna',
+          'Rachel',
+          'Jessica',
+          [length]: 6
+        ]
+      },
+      [length]: 2
+    ]
+  },
+  createdAt: '2024-05-07T00:26:09.084Z',
+  updatedAt: '2024-05-07T00:26:09.087Z'
+}
+7/5/2024, 5:56:09 am info: UserList created with ID dfd0fffe-67a9-4cd6-ac4a-2879a51f807d
+7/5/2024, 5:58:02 am debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"5fc9fd73-e32d-4628-befa-4141295e8040","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 5:58:02 am debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 5:58:02 am debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 5:59:20 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"48ee8f69-3645-4e8a-977f-007c5e7de503","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 5:59:42 am info: Listening on port '9090'
+7/5/2024, 5:59:46 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"5a23afe4-b91d-4469-a487-10648fcfb7b7","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 5:59:46 am debug: Finding all with userId 1 skip 0 and limit 100
+7/5/2024, 5:59:46 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:02:29 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1?limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"8f19c355-3a78-4ad6-90de-46e573a71d00","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:02:29 am debug: Finding all with userId 1 skip 0 and limit 100
+7/5/2024, 6:02:29 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:02:40 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1?limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"eaef7185-576f-4ca9-a024-1a3e71e1d155","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:02:40 am debug: Finding all with userId 1 skip 0 and limit 100
+7/5/2024, 6:02:40 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:02:54 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"90289868-c035-4fb8-9c1b-8445d57ebd98","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:02:54 am debug: Finding all with userId 1 skip 0 and limit 100
+7/5/2024, 6:02:54 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:03:40 am info: Listening on port '9090'
+7/5/2024, 6:03:57 am info: Listening on port '9090'
+7/5/2024, 6:04:05 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"8074cec0-9d1f-4950-9622-39f2fefdf2a9","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:04:05 am debug: Finding all with userId 1 skip 0 and limit 100
+7/5/2024, 6:04:05 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:05:00 am info: Listening on port '9090'
+7/5/2024, 6:05:04 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"2b833b33-74db-4c8b-99a4-b7b652aee17c","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:05:04 am debug: Finding all with userId 1 skip 0 and limit 1
+7/5/2024, 6:05:04 am debug: Finding with query {"userId":"1"}
+7/5/2024, 6:05:38 am info: Listening on port '9090'
+7/5/2024, 6:05:41 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"e382fddc-d3c5-4468-8a66-ebec3a07501e","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 6:05:41 am debug: Finding all with userId 1 skip 0 and limit 1
+7/5/2024, 6:05:41 am debug: Finding with query {"userId":"1"}
+7/5/2024, 10:44:42 am info: Listening on port '9090'
+7/5/2024, 10:47:01 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"68737011-eebf-4cb5-9ac5-84948a6dd603","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"1","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 10:47:01 am debug: Upserting with query { _id: '81d03626-e641-4ba9-b276-1c69d32497df' } for record {
+  userId: '1',
+  mediaId: '22',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T05:17:01.771Z',
+  updatedAt: '2024-05-07T05:17:01.774Z'
+}
+7/5/2024, 10:47:01 am info: UserList created with ID 81d03626-e641-4ba9-b276-1c69d32497df
+7/5/2024, 10:47:10 am debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"cd789f65-00a5-487e-922d-8415369c725c","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"2","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 10:47:10 am debug: Upserting with query { _id: '2537c29b-e0cc-46bb-9e5b-c1e8d6b748ed' } for record {
+  userId: '2',
+  mediaId: '22',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T05:17:10.278Z',
+  updatedAt: '2024-05-07T05:17:10.278Z'
+}
+7/5/2024, 10:47:10 am info: UserList created with ID 2537c29b-e0cc-46bb-9e5b-c1e8d6b748ed
+7/5/2024, 10:47:27 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"c1335d32-a047-47fd-b74f-ad1c76c6f045","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 10:47:27 am debug: Finding all with userId 1 skip 0 and limit 1
+7/5/2024, 10:47:27 am debug: Finding with query {"userId":"1"}
+7/5/2024, 11:05:35 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"fe21e9ad-5a5e-4daa-983d-136482397df9","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 11:05:35 am debug: Finding all with userId 1 skip 0 and limit 1
+7/5/2024, 11:05:35 am debug: Finding with query {"userId":"1"}
+7/5/2024, 11:06:04 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=2","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"1ae51c23-d022-4788-b994-d04108817c39","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 11:06:04 am debug: Finding all with userId 1 skip 0 and limit 2
+7/5/2024, 11:06:04 am debug: Finding with query {"userId":"1"}
+7/5/2024, 11:06:22 am debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=2&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"75f429c3-6aad-44f3-8ab3-bcc9d489b006","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 11:06:22 am debug: Finding all with userId 1 skip 1 and limit 1
+7/5/2024, 11:06:22 am debug: Finding with query {"userId":"1"}
+7/5/2024, 11:09:35 am info: Listening on port '9090'
+7/5/2024, 12:01:57 pm info: Listening on port '9090'
+7/5/2024, 12:02:44 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=1","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"ce4368a7-ca09-44cd-a0a8-0b5ffc88c32e","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 12:02:44 pm debug: Finding all with userId 1 skip 0 and limit 1
+7/5/2024, 12:02:44 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 12:02:44 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 12:03:01 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=2","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"38a5ac1c-caf2-40a8-b334-510860729556","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 12:03:01 pm debug: Finding all with userId 1 skip 0 and limit 2
+7/5/2024, 12:03:01 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 12:03:01 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 12:03:15 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=3","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"ad6f01e1-1626-4211-a3f8-7d97831434ef","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 12:03:15 pm debug: Finding all with userId 1 skip 0 and limit 3
+7/5/2024, 12:03:15 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 12:03:15 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 12:03:56 pm info: Listening on port '9090'
+7/5/2024, 12:04:00 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=3","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"90c873f5-d19a-40a4-88ff-9b2e07a41847","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 12:04:00 pm debug: Finding all with userId 1 skip 0 and limit 3
+7/5/2024, 12:04:00 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 12:04:00 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 12:04:15 pm info: Listening on port '9090'
+7/5/2024, 12:18:00 pm info: Listening on port '9090'
+7/5/2024, 12:18:15 pm debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"9bb8b931-fcf1-49f1-b3da-899703ec137c","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"2","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 12:18:15 pm debug: Finding count of all documents where {"userId":"2","mediaId":"22"}
+7/5/2024, 12:18:15 pm error: Error in processing request - Error: INVALID_LIST_ITEM
+    at ListItemSvc.<anonymous> (/Users/vinod/event-engine/src/svc/listItem-svc.ts:29:19)
+    at step (/Users/vinod/event-engine/src/svc/listItem-svc.ts:44:23)
+    at Object.next (/Users/vinod/event-engine/src/svc/listItem-svc.ts:25:53)
+    at fulfilled (/Users/vinod/event-engine/src/svc/listItem-svc.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  [stack]: [Getter/Setter],
+  [message]: 'INVALID_LIST_ITEM'
+}
+7/5/2024, 12:18:53 pm info: Listening on port '9090'
+7/5/2024, 12:19:04 pm debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"cee8ce12-ac62-4b47-aff1-92ad5eff6c7d","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"3","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 12:19:04 pm debug: Finding count of all documents where {"userId":"3","mediaId":"22"}
+7/5/2024, 12:19:04 pm debug: Upserting with query { _id: '5920343c-2190-4f29-bcbc-38307f72e9f9' } for record {
+  userId: '3',
+  mediaId: '22',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T06:49:04.859Z',
+  updatedAt: '2024-05-07T06:49:04.859Z'
+}
+7/5/2024, 12:19:04 pm info: UserList created with ID 5920343c-2190-4f29-bcbc-38307f72e9f9
+7/5/2024, 12:19:08 pm debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"a5b42ed4-d7ff-498f-b659-a9db7898f094","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"3","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 12:19:08 pm debug: Finding count of all documents where {"userId":"3","mediaId":"22"}
+7/5/2024, 12:19:08 pm error: Error in processing request - Error: INVALID_LIST_ITEM
+    at ListItemSvc.<anonymous> (/Users/vinod/event-engine/src/svc/listItem-svc.ts:29:19)
+    at step (/Users/vinod/event-engine/src/svc/listItem-svc.ts:44:23)
+    at Object.next (/Users/vinod/event-engine/src/svc/listItem-svc.ts:25:53)
+    at fulfilled (/Users/vinod/event-engine/src/svc/listItem-svc.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  [stack]: [Getter/Setter],
+  [message]: 'INVALID_LIST_ITEM'
+}
+7/5/2024, 12:21:03 pm debug: Processing request '{"method":"DELETE","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"455c174a-8fc3-4683-9112-2792bbfba0d0","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"53"},"body":{"id":"5920343c-2190-4f29-bcbc-38307f72e9f9"}}'
+7/5/2024, 12:21:03 pm debug: Deleting record with ID %q
+7/5/2024, 12:21:33 pm info: Listening on port '9090'
+7/5/2024, 12:22:47 pm debug: Processing request '{"method":"DELETE","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"c8601f5d-f91b-46e7-ab73-c61f38b59140","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"53"},"body":{"id":"5920343c-2190-4f29-bcbc-38307f72e9f9"}}'
+7/5/2024, 12:22:47 pm debug: Deleting record with ID %q
+7/5/2024, 12:22:57 pm debug: Processing request '{"method":"POST","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"ca2efc70-171c-4836-8d81-ca927c58efbf","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"368"},"body":{"userId":"3","mediaId":"22","mediaType":"Movie","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}}}'
+7/5/2024, 12:22:57 pm debug: Finding count of all documents where {"userId":"3","mediaId":"22"}
+7/5/2024, 12:22:57 pm debug: Upserting with query { _id: '3f7389be-44df-4f6e-b4b0-d4600437c637' } for record {
+  userId: '3',
+  mediaId: '22',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T06:52:57.417Z',
+  updatedAt: '2024-05-07T06:52:57.417Z'
+}
+7/5/2024, 12:22:57 pm info: UserList created with ID 3f7389be-44df-4f6e-b4b0-d4600437c637
+7/5/2024, 12:23:25 pm debug: Processing request '{"method":"DELETE","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"fa7f908f-19a0-4b24-96a8-248ddbcfbf64","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"53"},"body":{"id":"3f7389be-44df-4f6e-b4b0-d4600437c637"}}'
+7/5/2024, 12:23:25 pm debug: Deleting record with ID %q
+7/5/2024, 1:08:39 pm info: Listening on port '9090'
+7/5/2024, 1:11:51 pm info: Listening on port '9090'
+7/5/2024, 1:11:57 pm info: Listening on port '9090'
+7/5/2024, 1:12:35 pm info: Listening on port '9090'
+7/5/2024, 1:12:51 pm debug: Processing request '{"method":"DELETE","url":"/api/listItem","headers":{"content-type":"application/json","user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"6c9b281e-1ea0-4af2-add8-c057ae4079da","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"53"},"body":{"id":"3f7389be-44df-4f6e-b4b0-d4600437c637"}}'
+7/5/2024, 1:12:51 pm debug: Deleting record with ID %q
+7/5/2024, 1:12:57 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"68b7f93f-6825-40fc-834d-c1d9f89fa0a4","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:12:57 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:12:57 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:27:52 pm info: Listening on port '9090'
+7/5/2024, 1:27:57 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"f9ea0ff5-7739-460f-bcd0-52c8fe959d95","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:27:57 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:27:57 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:29:08 pm info: Listening on port '9090'
+7/5/2024, 1:29:14 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"6fce8bba-2cad-409b-8614-afb03b255407","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:29:14 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:29:14 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:35:24 pm info: Listening on port '9090'
+7/5/2024, 1:35:24 pm debug: Connected to Redis
+7/5/2024, 1:36:49 pm info: Listening on port '9090'
+7/5/2024, 1:36:50 pm debug: Connected to Redis
+7/5/2024, 1:37:06 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"d4386e75-d4a6-4154-8117-aba87052cec9","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:37:06 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:37:06 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:37:06 pm debug: Searching in redis for key : 2f9ebf35-7a4b-4c6e-bd75-072e02e888ba,
+7/5/2024, 1:37:43 pm info: Listening on port '9090'
+7/5/2024, 1:37:43 pm debug: Connected to Redis
+7/5/2024, 1:37:55 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"84b357d6-e6aa-4c9e-bfc6-03ef10dc778b","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:37:55 pm debug: Searching in redis for key : 2f9ebf35-7a4b-4c6e-bd75-072e02e888ba,
+7/5/2024, 1:37:55 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:37:55 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:46:17 pm info: Listening on port '9090'
+7/5/2024, 1:46:17 pm debug: Connected to Redis
+7/5/2024, 1:46:27 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"b01a21cb-e6b4-4de4-9b0a-16c7388c5677","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:46:27 pm debug: Searching in redis for key : 2f9ebf35-7a4b-4c6e-bd75-072e02e888ba,
+7/5/2024, 1:46:27 pm debug: Cache Miss !
+7/5/2024, 1:46:27 pm debug: Finding by ID { _id: '2f9ebf35-7a4b-4c6e-bd75-072e02e888ba' }
+7/5/2024, 1:46:27 pm debug: Finding with query {"_id":"2f9ebf35-7a4b-4c6e-bd75-072e02e888ba"}
+7/5/2024, 1:46:39 pm debug: Processing request '{"method":"GET","url":"/api/listItem/2f9ebf35-7a4b-4c6e-bd75-072e02e888ba","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"998003cb-2475-4c4d-a539-74397aa47c16","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:46:39 pm debug: Searching in redis for key : 2f9ebf35-7a4b-4c6e-bd75-072e02e888ba,
+7/5/2024, 1:46:39 pm debug: Cache Hit !
+7/5/2024, 1:50:06 pm info: Listening on port '9090'
+7/5/2024, 1:50:06 pm debug: Connected to Redis
+7/5/2024, 1:51:16 pm debug: Processing request '{"method":"GET","url":"/api/listItem/81d03626-e641-4ba9-b276-1c69d32497df","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"7a44727b-0a75-444b-9fd5-55bbd44e2544","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:51:16 pm debug: Searching in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df,
+7/5/2024, 1:51:16 pm debug: Cache Miss !
+7/5/2024, 1:51:16 pm debug: Finding by ID { _id: '81d03626-e641-4ba9-b276-1c69d32497df' }
+7/5/2024, 1:51:16 pm debug: Finding with query {"_id":"81d03626-e641-4ba9-b276-1c69d32497df"}
+7/5/2024, 1:51:28 pm debug: Processing request '{"method":"GET","url":"/api/listItem/81d03626-e641-4ba9-b276-1c69d32497df","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"ca70b450-371d-4c5c-9dc1-420bf3415447","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:51:28 pm debug: Searching in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df,
+7/5/2024, 1:51:28 pm debug: Cache Hit !
+7/5/2024, 1:51:36 pm debug: Processing request '{"method":"GET","url":"/api/listItem/81d03626-e641-4ba9-b276-1c69d32497df","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"9cde384c-a584-4641-bcb0-7e362d0abd9a","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:51:36 pm debug: Searching in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df,
+7/5/2024, 1:51:36 pm debug: Cache Hit !
+7/5/2024, 1:52:45 pm info: Listening on port '9090'
+7/5/2024, 1:52:45 pm debug: Connected to Redis
+7/5/2024, 1:57:10 pm debug: Processing request '{"method":"GET","url":"/api/listItem/81d03626-e641-4ba9-b276-1c69d32497df","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"012af711-1e27-4bc8-839a-77e8e3042b8d","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:57:10 pm debug: Searching in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df,
+7/5/2024, 1:57:10 pm debug: Cache Miss !
+7/5/2024, 1:57:10 pm debug: Finding by ID { _id: '81d03626-e641-4ba9-b276-1c69d32497df' }
+7/5/2024, 1:57:10 pm debug: Finding with query {"_id":"81d03626-e641-4ba9-b276-1c69d32497df"}
+7/5/2024, 1:57:10 pm debug: Setting in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df and value : {"createdAt":"2024-05-07T05:17:01.771Z","mediaId":"22","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]},"mediaType":"Movie","updatedAt":"2024-05-07T05:17:01.774Z","userId":"1","id":"81d03626-e641-4ba9-b276-1c69d32497df"} for 60 seconds,
+7/5/2024, 1:57:35 pm debug: Processing request '{"method":"GET","url":"/api/listItem/81d03626-e641-4ba9-b276-1c69d32497df","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"1a84ebfe-5703-409c-a460-bc60b506fce2","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 1:57:35 pm debug: Searching in redis for key : 81d03626-e641-4ba9-b276-1c69d32497df,
+7/5/2024, 1:57:35 pm debug: Cache Hit !
+7/5/2024, 2:02:19 pm info: Listening on port '9090'
+7/5/2024, 2:02:19 pm debug: Connected to Redis
+7/5/2024, 2:40:39 pm info: Listening on port '9090'
+7/5/2024, 2:40:39 pm debug: Connected to Redis
+7/5/2024, 2:40:56 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=3","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"58aac527-0f31-4c79-b89b-84fe824cf748","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 2:40:56 pm debug: Searching in redis for key : 1_1_3,
+7/5/2024, 2:40:56 pm debug: Cache Miss!
+7/5/2024, 2:40:56 pm debug: Finding all with userId 1 skip 0 and limit 3
+7/5/2024, 2:40:56 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 2:40:56 pm debug: Setting in redis for key : 1_1_3 and value : {"userId":"1","moviesAndShows":[{"id":"11","title":"Kaho Na Pyar Hai","description":"Love Drama Thriller","genre":["Drama","Romance"],"releaseDate":"12-2-2002","director":"Vinod Chopra","actors":["Amisha Patel","Hrithik Roshan"]},{"id":"12","title":"Suits","description":"Drama Thriller","genre":["Drama","Romance"],"episodes":[{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]},{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]}]},{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}]} for 60 seconds,
+7/5/2024, 2:40:56 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 2:41:08 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=3","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"f5c371d6-cde4-483d-b979-a7325eef9c21","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 2:41:08 pm debug: Searching in redis for key : 1_1_3,
+7/5/2024, 2:41:08 pm debug: Cache Hit !
+7/5/2024, 2:41:08 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 2:46:00 pm debug: Processing request '{"method":"GET","url":"/api/listItem/userId/1?page=1&limit=3","headers":{"user-agent":"PostmanRuntime/7.38.0","accept":"*/*","postman-token":"0dfa0e04-e930-4749-a8f8-08b8aee6ea68","host":"localhost:9090","accept-encoding":"gzip, deflate, br","connection":"keep-alive"},"body":{}}'
+7/5/2024, 2:46:00 pm debug: Searching in redis for key : 1_1_3,
+7/5/2024, 2:46:00 pm debug: Cache Miss!
+7/5/2024, 2:46:00 pm debug: Finding all with userId 1 skip 0 and limit 3
+7/5/2024, 2:46:00 pm debug: Finding with query {"userId":"1"}
+7/5/2024, 2:46:00 pm debug: Setting in redis for key : 1_1_3 and value : {"userId":"1","moviesAndShows":[{"id":"11","title":"Kaho Na Pyar Hai","description":"Love Drama Thriller","genre":["Drama","Romance"],"releaseDate":"12-2-2002","director":"Vinod Chopra","actors":["Amisha Patel","Hrithik Roshan"]},{"id":"12","title":"Suits","description":"Drama Thriller","genre":["Drama","Romance"],"episodes":[{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]},{"episodeNumber":"1","seasonNumber":"1","releaseDate":"12-2-2012","director":"Russo Brothers","actors":["Mike","Harvey","Louis","Donna","Rachel","Jessica"]}]},{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]}]} for 60 seconds,
+7/5/2024, 2:46:00 pm debug: Finding count of all documents where {"userId":"1"}
+7/5/2024, 3:03:13 pm debug: Finding count of all documents where {"userId":"5","mediaId":"22"}
+7/5/2024, 3:03:13 pm debug: Connected to Redis
+7/5/2024, 3:03:13 pm debug: Upserting with query { _id: '61ac3a73-6ec7-45a3-a13d-d4771c894f46' } for record {
+  userId: '5',
+  mediaId: '22',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T09:33:13.892Z',
+  updatedAt: '2024-05-07T09:33:13.892Z'
+}
+7/5/2024, 3:03:13 pm info: UserList created with ID 61ac3a73-6ec7-45a3-a13d-d4771c894f46
+7/5/2024, 3:03:13 pm debug: Searching in redis for key : 61ac3a73-6ec7-45a3-a13d-d4771c894f46,
+7/5/2024, 3:03:13 pm debug: Cache Miss !
+7/5/2024, 3:03:13 pm debug: Finding by ID { _id: '61ac3a73-6ec7-45a3-a13d-d4771c894f46' }
+7/5/2024, 3:03:13 pm debug: Finding with query {"_id":"61ac3a73-6ec7-45a3-a13d-d4771c894f46"}
+7/5/2024, 3:03:13 pm debug: Setting in redis for key : 61ac3a73-6ec7-45a3-a13d-d4771c894f46 and value : {"createdAt":"2024-05-07T09:33:13.892Z","mediaId":"22","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]},"mediaType":"Movie","updatedAt":"2024-05-07T09:33:13.892Z","userId":"5","id":"61ac3a73-6ec7-45a3-a13d-d4771c894f46"} for 60 seconds,
+7/5/2024, 3:06:39 pm debug: Finding count of all documents where {"userId":"5","mediaId":"22"}
+7/5/2024, 3:06:39 pm debug: Connected to Redis
+7/5/2024, 3:06:39 pm debug: Searching in redis for key : ,
+7/5/2024, 3:06:39 pm debug: Cache Miss !
+7/5/2024, 3:06:39 pm debug: Finding by ID { _id: '' }
+7/5/2024, 3:06:39 pm debug: Finding with query {"_id":""}
+7/5/2024, 3:06:59 pm debug: Finding count of all documents where {"userId":"5","mediaId":"22"}
+7/5/2024, 3:06:59 pm debug: Connected to Redis
+7/5/2024, 3:06:59 pm debug: Searching in redis for key : ,
+7/5/2024, 3:06:59 pm debug: Cache Miss !
+7/5/2024, 3:06:59 pm debug: Finding by ID { _id: '' }
+7/5/2024, 3:06:59 pm debug: Finding with query {"_id":""}
+7/5/2024, 3:09:19 pm debug: Finding count of all documents where {"userId":"0.7125726109218029","mediaId":"0.6851908226981103"}
+7/5/2024, 3:09:19 pm debug: Connected to Redis
+7/5/2024, 3:09:19 pm debug: Upserting with query { _id: 'b32e5a1b-92c2-4e4c-9043-da5fb7558ea6' } for record {
+  userId: '0.7125726109218029',
+  mediaId: '0.6851908226981103',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T09:39:19.161Z',
+  updatedAt: '2024-05-07T09:39:19.161Z'
+}
+7/5/2024, 3:09:19 pm info: UserList created with ID b32e5a1b-92c2-4e4c-9043-da5fb7558ea6
+7/5/2024, 3:09:19 pm debug: Searching in redis for key : b32e5a1b-92c2-4e4c-9043-da5fb7558ea6,
+7/5/2024, 3:09:19 pm debug: Cache Miss !
+7/5/2024, 3:09:19 pm debug: Finding by ID { _id: 'b32e5a1b-92c2-4e4c-9043-da5fb7558ea6' }
+7/5/2024, 3:09:19 pm debug: Finding with query {"_id":"b32e5a1b-92c2-4e4c-9043-da5fb7558ea6"}
+7/5/2024, 3:09:19 pm debug: Setting in redis for key : b32e5a1b-92c2-4e4c-9043-da5fb7558ea6 and value : {"createdAt":"2024-05-07T09:39:19.161Z","mediaId":"0.6851908226981103","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]},"mediaType":"Movie","updatedAt":"2024-05-07T09:39:19.161Z","userId":"0.7125726109218029","id":"b32e5a1b-92c2-4e4c-9043-da5fb7558ea6"} for 60 seconds,
+7/5/2024, 3:10:03 pm debug: Finding count of all documents where {"userId":"0.28907900060906266","mediaId":"0.6487607265141078"}
+7/5/2024, 3:10:04 pm debug: Connected to Redis
+7/5/2024, 3:10:04 pm debug: Upserting with query { _id: '91438994-5cbd-4e59-aecc-3ef225bbd23b' } for record {
+  userId: '0.28907900060906266',
+  mediaId: '0.6487607265141078',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T09:40:04.028Z',
+  updatedAt: '2024-05-07T09:40:04.028Z'
+}
+7/5/2024, 3:10:04 pm info: UserList created with ID 91438994-5cbd-4e59-aecc-3ef225bbd23b
+7/5/2024, 3:10:04 pm debug: Searching in redis for key : 91438994-5cbd-4e59-aecc-3ef225bbd23b,
+7/5/2024, 3:10:04 pm debug: Cache Miss !
+7/5/2024, 3:10:04 pm debug: Finding by ID { _id: '91438994-5cbd-4e59-aecc-3ef225bbd23b' }
+7/5/2024, 3:10:04 pm debug: Finding with query {"_id":"91438994-5cbd-4e59-aecc-3ef225bbd23b"}
+7/5/2024, 3:10:04 pm debug: Setting in redis for key : 91438994-5cbd-4e59-aecc-3ef225bbd23b and value : {"createdAt":"2024-05-07T09:40:04.028Z","mediaId":"0.6487607265141078","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]},"mediaType":"Movie","updatedAt":"2024-05-07T09:40:04.028Z","userId":"0.28907900060906266","id":"91438994-5cbd-4e59-aecc-3ef225bbd23b"} for 60 seconds,
+7/5/2024, 3:10:28 pm debug: Finding count of all documents where {"userId":"0.238986620696217","mediaId":"0.39823575683956314"}
+7/5/2024, 3:10:28 pm debug: Connected to Redis
+7/5/2024, 3:10:28 pm debug: Upserting with query { _id: 'fca24237-7ab3-434d-8d3d-8097b10d512f' } for record {
+  userId: '0.238986620696217',
+  mediaId: '0.39823575683956314',
+  mediaType: 'Movie',
+  mediaItem: {
+    id: '22',
+    title: 'Koi Mil Gaya',
+    description: 'Love Drama Thriller with SciFi',
+    genre: [ 'Drama', 'SciFi', [length]: 2 ],
+    releaseDate: '12-2-2004',
+    director: 'Vinod Chopra',
+    actors: [ 'Preeti Zinta', 'Hrithik Roshan', [length]: 2 ]
+  },
+  createdAt: '2024-05-07T09:40:28.031Z',
+  updatedAt: '2024-05-07T09:40:28.031Z'
+}
+7/5/2024, 3:10:28 pm info: UserList created with ID fca24237-7ab3-434d-8d3d-8097b10d512f
+7/5/2024, 3:10:28 pm debug: Searching in redis for key : fca24237-7ab3-434d-8d3d-8097b10d512f,
+7/5/2024, 3:10:28 pm debug: Cache Miss !
+7/5/2024, 3:10:28 pm debug: Finding by ID { _id: 'fca24237-7ab3-434d-8d3d-8097b10d512f' }
+7/5/2024, 3:10:28 pm debug: Finding with query {"_id":"fca24237-7ab3-434d-8d3d-8097b10d512f"}
+7/5/2024, 3:10:28 pm debug: Setting in redis for key : fca24237-7ab3-434d-8d3d-8097b10d512f and value : {"createdAt":"2024-05-07T09:40:28.031Z","mediaId":"0.39823575683956314","mediaItem":{"id":"22","title":"Koi Mil Gaya","description":"Love Drama Thriller with SciFi","genre":["Drama","SciFi"],"releaseDate":"12-2-2004","director":"Vinod Chopra","actors":["Preeti Zinta","Hrithik Roshan"]},"mediaType":"Movie","updatedAt":"2024-05-07T09:40:28.031Z","userId":"0.238986620696217","id":"fca24237-7ab3-434d-8d3d-8097b10d512f"} for 60 seconds,
+7/5/2024, 3:15:09 pm info: Listening on port '9090'
+7/5/2024, 3:15:09 pm debug: Connected to Redis
+7/5/2024, 3:47:18 pm info: Listening on port '9090'
+7/5/2024, 3:47:18 pm debug: Connected to Redis
